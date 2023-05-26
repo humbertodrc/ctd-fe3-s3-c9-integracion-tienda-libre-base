@@ -1,18 +1,10 @@
 // Aquí encontramos la información que debemos retornar
 // en cada una de las rutas de nuestra API.
 
-export interface IProduct {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  image: string;
-  rating: number;
-}
-
+import { ProductsAPIResponse, TyCsAPIResponse } from '../../types';
 
 // Para la ruta de productos destacados
-export const products: IProduct[] = [
+export const products: ProductsAPIResponse = [
   {
     id: 1,
     title: "Mochila con correas",
@@ -106,19 +98,9 @@ export const products: IProduct[] = [
   },
 ];
 
-export interface TycsData {
-  version: string;
-  tycs: Tycs[];
-}
-
-export interface Tycs{
-  id: number;
-  title: string;
-  description: string;
-}
 
 // Para la ruta de términos y condiciones
-export const tycs = {
+export const tycs : TyCsAPIResponse = {
   version: "3 de julio, 2022",
   tycs: [
     {

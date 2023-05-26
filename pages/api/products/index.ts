@@ -1,11 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { IProduct, products } from '../db'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ProductsAPIResponse } from '../../../types';
+import { products } from '../db';
 
-type Message = {
+interface Message {
   message: string
 }
 
-type DataProduct = IProduct[] | Message
+type DataProduct = ProductsAPIResponse | Message
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<DataProduct>) {
   res.status(200).json(products)
