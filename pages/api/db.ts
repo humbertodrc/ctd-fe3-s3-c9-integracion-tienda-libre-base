@@ -1,7 +1,7 @@
 // Aquí encontramos la información que debemos retornar
 // en cada una de las rutas de nuestra API.
 
-export interface Product {
+export interface IProduct {
   id: number;
   title: string;
   price: number;
@@ -12,7 +12,7 @@ export interface Product {
 
 
 // Para la ruta de productos destacados
-export const products: Product[] = [
+export const products: IProduct[] = [
   {
     id: 1,
     title: "Mochila con correas",

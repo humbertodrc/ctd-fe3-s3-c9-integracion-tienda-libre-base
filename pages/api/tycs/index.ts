@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { TycsData, tycs } from '../db'
-import { type } from 'os'
 
 type Message = {
   message: string
